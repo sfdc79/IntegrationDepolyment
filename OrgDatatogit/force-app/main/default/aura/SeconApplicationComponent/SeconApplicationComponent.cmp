@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="SecondComponentMessage" type="string" default="Default SecondComponentMessage" ></aura:attribute>
+    <aura:handler event="c:ApplicationEvent" action="{!c.doHandleEvent}"></aura:handler>
+    <p> {!v.SecondComponentMessage} </p>
+    
+</aura:component>

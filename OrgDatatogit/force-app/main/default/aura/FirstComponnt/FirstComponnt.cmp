@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:registerEvent name = "ApplicationEvent" type = "c:ApplicationEvent"></aura:registerEvent>
+      
+    <lightning:button variant="brand" label="ApplicationEvent" iconName="utility:download" iconposition="left"
+onclick="{!c.doSomething}"/>
+</aura:component>

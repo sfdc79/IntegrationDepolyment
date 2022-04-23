@@ -1,0 +1,31 @@
+<aura:component controller= "CarTypeSearch" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="buttonLabel" type="String" default = "Search Button"  />
+    <aura:attribute name="newLabel" type="String" default = "New Button"  />
+    <aura:attribute name="showNew" type="Boolean" default = "true"  />
+    
+    <aura:attribute name="carTypes" type="Car_Type__c[]" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:layout horizontalAlign="center">
+        <lightning:layoutItem padding="around-medium">
+            
+        <lightning:select name="selectiteam" aura:id="SelectedCar" label="All Types" variant="label-hidden" value="" onchange="{!c.chagevaluealert }" >
+       <option value="" text= "All Types" />
+            <aura:iteration items="{!v.carTypes}" var="model">
+        <option value="{!model}" text="{!model}" />
+              </aura:iteration>
+          </lightning:select>
+            
+        </lightning:layoutItem>
+         <lightning:layoutItem  padding='around-medium'>
+        <lightning:button variant="brand" label='{!v.buttonLabel}' onclick="{! c.SearchButtonClick }" />
+         
+           <aura:if isTrue="{!v.showNew}">
+             <lightning:button variant='neutral' label='{#v.newLabel}' onclick="{! c.CreateCartype}" />
+           </aura:if> 
+            
+        </lightning:layoutItem>
+    
+    </lightning:layout>
+</aura:component>

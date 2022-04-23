@@ -1,0 +1,17 @@
+<aura:component>
+    <aura:attribute name="Pk" type="String" default="SFDC Panther" access="public" />
+    <aura:attribute name="Age" type="Integer" default="24" access="private" />
+    <aura:attribute name="colorarray" type="String[]" default="['red','blue','green']" access="private"/>
+    <aura:attribute name="ListColor" type="List" default="['red','blue','green']" access="private" />
+    <aura:attribute name="colorset" type="Set" default="['red','blue','green']" access="private" />
+    
+    <lightning:input aura:id="testinput" label="Enter Age"/>
+    <br>
+    </br>
+    <lightning:button value="Components Methods" label = "ComponentMethodsDemo" onclick="{!c.Trail}" />
+    <br>
+    </br>
+     <br>
+    </br>
+    Welcome {!v.Pk} , Age : {!v.Age} , color:{!v.colorarray[0]}
+</aura:component>
