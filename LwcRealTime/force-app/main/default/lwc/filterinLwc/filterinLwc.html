@@ -1,0 +1,43 @@
+<template>
+  <lightning-card title="Client sid filtering">
+    <div class="slds-p-around-medium">
+
+      <lightning-layout >
+        <lightning-layout-item size="2" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+          <lightning-combobox
+            name="Filterby" label="Filterby" value={Filterbyvalue}  placeholder="Select Filterby"
+            options={Filterbyoption}
+            onchange={handleChange} ></lightning-combobox>
+          <div class="custom-box">1</div>
+        </lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+          <lightning-input size=""  type="text" variant="standard" name="Search Text"  
+          onkeyup={handleInput}></lightning-input>
+        </lightning-layout-item>
+      </lightning-layout>
+    
+    <table>
+            <thead>
+                <tr>
+                  <template if:true={Heading} for:each={Heading} for:item="head" >
+                      <th key={head}> {head} </th>
+                    </template>
+                </tr>
+                  
+            </thead>
+            <tbody>
+              <template if:true={filterData} for:each={filterData} for:item="Data" >
+                  <tr key={Data.Id}>
+                      <td>{Data.Id}</td>
+                      <td>{Data.Name}</td>
+                      <td>{Data.Email}</td>
+                      <td>{Data.Phone}}</td>
+                  </tr>
+                </template>
+                    
+                
+            </tbody>
+        </table>
+    </div>
+  </lightning-card>
+</template>

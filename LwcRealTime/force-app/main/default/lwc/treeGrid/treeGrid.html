@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+        <lightning-button></lightning-button>
+        <p>
+            <strong>
+                Hello Tree Grid
+            </strong>
+        </p>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-tree-grid
+            hide-checkbox-column
+                columns={gridColumns}
+                data={gridData}
+                key-field="Name"
+            ></lightning-tree-grid>
+        </div>
+    </lightning-card>
+</template>
