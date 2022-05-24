@@ -1,0 +1,24 @@
+<template>
+    <lightning-card>
+        <c-p2c-child-comp  arraydemo ={parentCompDetails}
+        childrecevier ={parentonclick}>
+
+        </c-p2c-child-comp>
+    </lightning-card>
+<lightning-card>
+    <lightning-button variant="brand" 
+    label="ParentButton" 
+    title="ParentButton" 
+    onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+    
+    <lightning-card>
+<lightning-input 
+        type="text" 
+        variant="standard" 
+        name="SendData" 
+        label="label" 
+        onkeyup ={testEvent}
+        placeholder="type here..."></lightning-input>
+        </lightning-card>
+</template>

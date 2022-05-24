@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Apex Wire To Function Demo">
+        <div class="slds-p-around_medium">
+            <template if:true={accntList}>
+                <template for:each={accntList} for:item="account">
+                    <div class="slds-box slds-box_xx-small" key={account.Id}>
+                       
+                        <p><strong>Type : </strong> {account.newType}</p>
+                        
+                    </div>
+                </template>
+               
+            </template>
+        </div>
+    </lightning-card>
+</template>

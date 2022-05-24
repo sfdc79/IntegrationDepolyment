@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Child Component">
+        <template  for:each={arraydemo} for:item="Arr" >
+           <li key={Arr.Id}>
+                {Arr.Name}
+           </li>
+        </template>
+    </lightning-card>
+<lightning-card title="Onclick of Parent">
+   This is recieved from :  {childrecevier}
+</lightning-card>
+    
+</template>
