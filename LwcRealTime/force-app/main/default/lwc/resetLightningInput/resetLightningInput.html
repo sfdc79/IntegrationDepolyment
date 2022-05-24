@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Reset Input Data">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="First Name" data-id="reset"></lightning-input>
+            <lightning-input type="text" label="Last Name" data-id="reset"></lightning-input>
+            <lightning-input type="text" label="City" data-id="reset"></lightning-input>
+            <lightning-input type="Checkbox" label="active" data-id="active"></lightning-input>
+            <div class="slds-var-m-around_medium">
+                <lightning-button label="Reset All" onclick={handleResetAll}></lightning-button>
+                <lightning-button label="Reset City Field" onclick={handleResetCityField}></lightning-button>
+                <lightning-button label="Reset using data-id" data-id="reset" onclick={handleResetUsingDataId}></lightning-button>
+                <lightning-button label="Reset Checkbox" data-id="reset" onclick={handleResetCheckbox}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
